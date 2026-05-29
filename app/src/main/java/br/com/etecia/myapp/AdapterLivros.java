@@ -37,7 +37,8 @@ public class AdapterLivros extends RecyclerView.Adapter<AdapterLivros.ViewHolder
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
+        holder.modeloTituloLivro.setText(lstLivros.get(position).getTitulo());
+        holder.modeloImgLivros.setImageResource(lstLivros.get(position).getImglivro());
     }
 
     @Override
