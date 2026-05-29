@@ -31,9 +31,9 @@ public class MainActivity extends AppCompatActivity {
 
         lstLivros = new ArrayList<>();
 
-        lstLivros.add(new Livros("Pequeno principe","drama",R.drawable.pequeno,20.00));
-        lstLivros.add(new Livros("Pequeno principe","drama",R.drawable.pequeno,20.00));
-        lstLivros.add(new Livros("Pequeno principe","drama",R.drawable.pequeno,20.00));
+        lstLivros.add(new Livros("O Pequeno principe","drama",R.drawable.pequeno,20.00));
+        lstLivros.add(new Livros("Tito e o Ônibus - Veículos Divertidos","infantil",R.drawable.tito,20.00));
+        lstLivros.add(new Livros("O Poder do Autocontrole: A Chave para a Grandeza Pessoal","coach",R.drawable.opoder,20.00));
         lstLivros.add(new Livros("Pequeno principe","drama",R.drawable.pequeno,20.00));
         lstLivros.add(new Livros("Pequeno principe","drama",R.drawable.pequeno,20.00));
         lstLivros.add(new Livros("Pequeno principe","drama",R.drawable.pequeno,20.00));
