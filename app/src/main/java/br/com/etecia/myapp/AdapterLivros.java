@@ -32,7 +32,7 @@ public class AdapterLivros extends RecyclerView.Adapter<AdapterLivros.ViewHolder
         LayoutInflater inflater = LayoutInflater.from(context);
         view = inflater.inflate(R.layout.modelo_livros,parent,false);
 
-        return null;
+        return new ViewHolder(view);
     }
 
     @Override
