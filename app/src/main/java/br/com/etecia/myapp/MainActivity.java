@@ -7,13 +7,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
     List<Livros> lstLivros;
-    RecyclerView IDRecLivros;
+    RecyclerView idRecLivros;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +27,26 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        IDRecLivros = findViewById(R.id.IDRecLivros);
+        idRecLivros = findViewById(R.id.IDRecLivros);
+
+        lstLivros = new ArrayList<>();
+
+        lstLivros.add(new Livros("Pequeno principe","drama",R.drawable.pequeno,20.00));
+        lstLivros.add(new Livros("Pequeno principe","drama",R.drawable.pequeno,20.00));
+        lstLivros.add(new Livros("Pequeno principe","drama",R.drawable.pequeno,20.00));
+        lstLivros.add(new Livros("Pequeno principe","drama",R.drawable.pequeno,20.00));
+        lstLivros.add(new Livros("Pequeno principe","drama",R.drawable.pequeno,20.00));
+        lstLivros.add(new Livros("Pequeno principe","drama",R.drawable.pequeno,20.00));
+        lstLivros.add(new Livros("Pequeno principe","drama",R.drawable.pequeno,20.00));
+        lstLivros.add(new Livros("Pequeno principe","drama",R.drawable.pequeno,20.00));
+        lstLivros.add(new Livros("Pequeno principe","drama",R.drawable.pequeno,20.00));
+        lstLivros.add(new Livros("Pequeno principe","drama",R.drawable.pequeno,20.00));
+
         AdapterLivros adapterLivros = new AdapterLivros(getApplicationContext(),lstLivros);
+
+        idRecLivros.setLayoutManager(new GridLayoutManager(getApplicationContext(),2));
+
+        idRecLivros.setAdapter(adapterLivros);
 
 
     }
