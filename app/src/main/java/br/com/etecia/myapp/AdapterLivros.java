@@ -1,5 +1,7 @@
 package br.com.etecia.myapp;
 
+import android.content.Context;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -10,10 +12,26 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.card.MaterialCardView;
 
+import java.util.List;
+
 public class AdapterLivros extends RecyclerView.Adapter<AdapterLivros.ViewHolder> {
+
+    private Context context;
+    private List<Livros> lstLivros;
+
+    public AdapterLivros(Context context, List<Livros> lstLivros) {
+        this.context = context;
+        this.lstLivros = lstLivros;
+    }
+
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view;
+
+        LayoutInflater inflater = LayoutInflater.from(context);
+        view = inflater.inflate(R.layout.modelo_livros,parent,false);
+
         return null;
     }
 
@@ -24,10 +42,10 @@ public class AdapterLivros extends RecyclerView.Adapter<AdapterLivros.ViewHolder
 
     @Override
     public int getItemCount() {
-        return 0;
+        return lstLivros.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder {
 
         MaterialCardView modeloCardLivros;
         ImageView modeloImgLivros;
